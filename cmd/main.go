@@ -18,8 +18,7 @@ func main() {
 }
 
 func run() error {
-	conv := converter.MDToSnow{}
-	r, err := conv.Convert(os.Stdin)
+	r, err := converter.Convert(os.Stdin)
 	if err != nil {
 		return fmt.Errorf("could not convert: %w", err)
 	}

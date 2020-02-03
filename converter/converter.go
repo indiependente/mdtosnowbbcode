@@ -14,9 +14,7 @@ const (
 	closeTag = `[/code]`
 )
 
-type MDToSnow struct{}
-
-func (m MDToSnow) Convert(r io.Reader) (io.Reader, error) {
+func Convert(r io.Reader) (io.Reader, error) {
 	md, err := ioutil.ReadAll(r)
 	if err != nil {
 		return nil, fmt.Errorf("could not read content: %w", err)
