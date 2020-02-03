@@ -10,7 +10,7 @@ endif
 
 .PHONY: build
 build:
-	CGO_ENABLED=0 go build $(LD_FLAGS) -o mdtosnow cmd/main.go
+	CGO_ENABLED=0 go build $(LD_FLAGS) -o mdtosnow cmd/mdtosnow/main.go
 
 .PHONY: clean
 clean:
